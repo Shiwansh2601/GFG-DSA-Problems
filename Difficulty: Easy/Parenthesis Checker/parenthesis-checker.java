@@ -1,21 +1,25 @@
 class Solution {
     public boolean isBalanced(String s) {
-        // code here
-         Stack<Character>st=new Stack<>();
+        
+        
+        
+         Stack<Character>charstack=new Stack<>();
+         
         for(char ch:s.toCharArray())
         {
             if(ch=='('||ch=='{'||ch=='[')
             {
-                st.push(ch);
+                charstack.push(ch);
             }
             else
             {
-                if(st.isEmpty())
+                if(charstack.isEmpty())
                 return false;
-                 char top=st.peek();
-                if((ch==')' && top=='(')||(ch=='}' && top=='{')||(ch==']' && top=='['))
+                
+                 char last=charstack.peek();
+                if((ch==')' && last=='(')||(ch=='}' && last=='{')||(ch==']' && last=='['))
                 {
-                      st.pop();
+                      charstack.pop();
                 }
                 else
                 {
@@ -23,6 +27,6 @@ class Solution {
                 }
             }
         }
-        return st.isEmpty();
+        return charstack.isEmpty();
     }
 }
