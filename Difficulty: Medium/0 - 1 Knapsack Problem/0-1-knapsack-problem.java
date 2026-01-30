@@ -1,35 +1,34 @@
 class Solution {
-    
     public int knapsack(int W, int val[], int wt[]) {
         // code here
-        int[][] dp=new int[1001][1001];
-   
-        return solve(W,val,wt,wt.length,dp);
-        
-        
-    }
-    
-     public int solve(int W, int val[], int wt[],int n,int[][] dp) {
-        // code here
-        for(int i=1;i<=wt.length;i++)
+        int n=val.length;
+        int[][] dp=new int[n+1][W+1];
+        for(int i=0;i<=n;i++)
         {
-            for(int j=1;j<=W;j++)
-            {
-                
-              if(wt[i-1]<=j)
-             {
-                 dp[i][j]=Math.max(val[i-1]+dp[i-1][j-wt[i-1]],dp[i-1][j]);
-             }
-            else
-           {
-             dp[i][j]=dp[i-1][j];
-           }
-           
-            }
+             Arrays.fill(dp[i],-1);
         }
         
-         return dp[wt.length][W];
+       
+        return solve(n,W,val,wt,dp);
+    }
+    public int solve(int n,int cap,int[] val,int[] wt,int[][] dp){
+        //base case
         
+        if(n==0 ||cap==0)
+        return 0;
         
+        if(dp[n][cap]!=-1)
+        return dp[n][cap];
+                                              
+        //main code
+        
+        if(wt[n-1]<=cap)
+        {
+            return dp[n][cap]=Math.max(val[n-1]+solve(n-1,cap-wt[n-1],val,wt,dp),solve(n-1,cap,val,wt,dp));
+        }
+        else
+        {
+            return dp[n][cap]=solve(n-1,cap,val,wt,dp);
+        }
     }
 }
