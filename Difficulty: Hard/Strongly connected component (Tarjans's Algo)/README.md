@@ -1,0 +1,18 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/strongly-connected-component-tarjanss-algo-1587115621/1">Strongly connected component (Tarjans's Algo)</a></h2><h3>Difficulty Level : Difficulty: Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a Directed Graph with V vertices and E edges</span>, <span style="font-size: 18px;"> Find the members of strongly connected components in the graph.</span></p>
+<p><strong><span style="font-size: 18px;">Note - </span></strong><span style="font-size: 18px;">Sort both the individual components and array of the components.</span></p>
+<p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input:</strong></span>
+<img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/701448/Web/Other/blobid0_1745301017.jpg" width="319" height="319"><br><span style="font-size: 18px;"><strong>Output: </strong>0 1 2 3 4
+<strong>Explanation</strong>:
+</span><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/701448/Web/Other/blobid1_1745301078.jpg" width="363" height="245"><br><span style="font-size: 18px;">We can clearly see that there are 3 Strongly
+Connected Components in the Graph</span> <span style="font-size: 18px;">as mentioned
+in the Output.</span>
+</pre>
+<pre><span style="font-size: 18px;"><strong>Input:</strong></span>
+<img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/701448/Web/Other/blobid2_1745301113.jpg" width="370" height="246"><br><span style="font-size: 18px;"><strong>Output: </strong>0 1 2
+<strong>Explanation</strong>:</span>
+<span style="font-size: 18px;">All of the nodes are connected to each other.
+So, there's only one SCC as shown.</span></pre>
+<p><br><span style="font-size: 18px;"><strong>Your Task:</strong></span><br><span style="font-size: 18px;">You don't need to read input or print anything. Your task is to complete the function <strong>tarjans()</strong>&nbsp;which takes the number of vertices V&nbsp;and adjacency list of the graph as input parameters&nbsp;and returns a list of list of integers denoting the members of strongly connected components in the given graph.<br><strong>Note: </strong>A single strongly connected component must be represented in the form of a list if integers sorted in the ascending order.&nbsp;The resulting list should consist of a list of all SCCs&nbsp;which must be&nbsp;sorted in a way such that a lexicographically smaller list of integers appears first. </span></p>
+<p><br><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong>&nbsp;O(V + E).<br><strong>Expected Auxiliary Space:</strong>&nbsp;O(V).</span></p>
+<p><br><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 </span> <span style="font-size: 18px;">≤</span> <span style="font-size: 18px;"> V&nbsp;</span> <span style="font-size: 18px;">≤</span> <span style="font-size: 18px;"> 10<sup>5</sup><br>1 </span> <span style="font-size: 18px;">≤</span> <span style="font-size: 18px;"> E&nbsp;</span> <span style="font-size: 18px;">≤</span> <span style="font-size: 18px;"> 10<sup>5</sup><br>0 </span> <span style="font-size: 18px;">≤</span> <span style="font-size: 18px;"> u, v </span> <span style="font-size: 18px;">≤</span> <span style="font-size: 18px;"> N-1</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Amazon</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Graph</code>&nbsp;<code>Data Structures</code>&nbsp;
