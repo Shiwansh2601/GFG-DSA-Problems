@@ -2,32 +2,31 @@ class Solution {
     public int cutRod(int[] price) {
         // code here
         int n=price.length;
-        int[] len=new int[n];
-        for(int i=0;i<n;i++)
-        {
-            len[i]=i+1;
-        }
-        int l=n;
         int[][] dp=new int[n+1][n+1];
-       return solve(n,l,price,len,dp);
-       
+        for(int i=0;i<=n;i++)
+        {
+            Arrays.fill(dp[i],-1);
+        }
+        
+        return solve(0,n,price,dp);
+        
     }
     
-    
-    public int solve(int n,int l,int[] price,int[] len,int[][] dp)
+    public int solve(int i,int n,int[] arr,int[][] dp)
     {
-        for(int i=1;i<=n;i++)
+        if(i==arr.length ||n<=0)
+        return 0;
+        
+        if(dp[i][n]!=-1)
+        return dp[i][n];
+        
+        int nontake=solve(i+1,n,arr,dp);
+        int take=0;
+        if(i+1<=n)
         {
-            for(int j=1;j<=l;j++)
-            {
-                if(len[i-1]<=j)
-                {
-                    dp[i][j]=Math.max(dp[i][j-len[i-1]]+price[i-1],dp[i-1][j]);
-                }
-                else
-                dp[i][j]=dp[i-1][j];
-            }
+            take=arr[i]+solve(i,n-(i+1),arr,dp);
         }
-        return dp[n][l];
+        
+        return dp[i][n]=Math.max(take,nontake);
     }
 }
