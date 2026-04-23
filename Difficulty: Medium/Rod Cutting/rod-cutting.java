@@ -14,7 +14,7 @@ class Solution {
     
     public int solve(int i,int n,int[] arr,int[][] dp)
     {
-        if(i==arr.length ||n<=0)
+        if(i==arr.length)
         return 0;
         
         if(dp[i][n]!=-1)
