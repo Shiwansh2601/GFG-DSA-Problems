@@ -1,0 +1,7 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/minimum-xor-value-pair/1">Minimum XOR Value Pair</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given an array arr[] of size <strong>n</strong>, find the minimum value of <strong>arr[i] XOR arr[j]</strong> among all pairs of distinct indices i and j.</span></p>
+<p><br><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr[] = [9 5 3]<strong><br>Output: </strong>6<strong><br>Explanation: </strong>The XOR values of all possible pairs are 9 ^ 5 = 12, 9 ^ 3 = 10, and 5 ^ 3 = 6. Therefore, the minimum XOR value is 6.</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input</strong></span>: <span style="font-size: 18px;">arr[] = [6 1 4 2]
+<strong>Output:</strong> 2
+<strong>Explanation</strong>: Among all pairs, the minimum XOR value is obtained from 6 ^ 4 = 2.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 &lt;= n &lt;= 10<sup>5</sup></span><br><span style="font-size: 18px;">1<sup> </sup>&lt;= arr[i] &lt;= 10<sup>5</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Microsoft</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Trie</code>&nbsp;<code>Advanced Data Structure</code>&nbsp;
