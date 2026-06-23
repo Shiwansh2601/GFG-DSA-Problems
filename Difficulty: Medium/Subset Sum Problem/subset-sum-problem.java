@@ -14,9 +14,12 @@ class Solution {
         if(sum==0)
         return true;
         
-        if(arr[n-1]<=sum)
+        if(arr[n-1]>sum)
+         return solve(arr,n-1,sum);
+         
+         
         return solve(arr,n-1,sum-arr[n-1]) ||solve(arr,n-1,sum);
-        else
-        return solve(arr,n-1,sum);
+        
+       
     }
 }
