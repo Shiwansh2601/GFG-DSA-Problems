@@ -7,7 +7,7 @@ class Solution {
         {
             Arrays.fill(dp[i],-1);
         }
-        return solve(1,arr.length-1,arr,dp);
+        return solve(0,arr.length-2,arr,dp);
     }
     
     static int solve(int i,int j,int[] arr,int[][] dp)
@@ -23,7 +23,7 @@ class Solution {
         
         for(int k=i;k<j;k++)
         {
-            int step=arr[i-1]*arr[k]*arr[j];
+            int step=arr[i]*arr[k+1]*arr[j+1];
             
             min=Math.min(min,step+solve(i,k,arr,dp)+solve(k+1,j,arr,dp));
         }
