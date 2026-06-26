@@ -12,9 +12,9 @@ class Solution {
     public void solve(ArrayList<ArrayList<Integer>> adj,ArrayList<Integer>ans,int curr,boolean[] vis){
         ans.add(curr);
         vis[curr]=true;
-        for(int i=0;i<adj.get(curr).size();i++)
+        for(int x:adj.get(curr))
         {
-            int x=adj.get(curr).get(i);
+            
             if(!vis[x])
             solve(adj,ans,x,vis);
         }
